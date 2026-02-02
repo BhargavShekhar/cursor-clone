@@ -1,7 +1,6 @@
 :root {
     --primary-color-bg: #14120b;
-    --primary-color-text: #ffffff;
-    --secondary-color-text: #EDECEC;
+    --primary-color-text: #EDECEC;
     --button-bg: #edecec;
     --font-main: "CursorGothic", "CursorGothic Fallback", system-ui, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -15,18 +14,19 @@
 body {
     font-family: var(--font-main);
     background-color: var(--primary-color-bg);
-    color: var(--secondary-color-text);
+    color: var(--primary-color-text);
     height: 100vh;
     width: 100vw;
+    padding-inline: 300px;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     /* border: 1px solid red; */
     height: 60px;
-    margin: 0px 170px;
+    /* margin: 0px 150px; */
 }
 
 #logo {
@@ -42,26 +42,25 @@ nav {
     /* border: 1px solid orange; */
 }
 
-#logo > img {
+#logo>img {
     height: 35%;
     object-fit: cover;
 }
-
 
 ul {
     display: flex;
     list-style: none;
 }
 
-li > a {
+li>a {
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     padding: 20px;
-    color: var(--secondary-color-text);
+    color: var(--primary-color-text);
 }
 
-li > a:hover {
+li>a:hover {
     color: lightgray;
 }
 
@@ -74,6 +73,10 @@ li > a:hover {
     margin: 0px 4px;
 }
 
+.button:hover {
+    background-color: #edecece8;
+}
+
 .download_button {
     width: 80px;
 }
@@ -82,4 +85,33 @@ li > a:hover {
     border: 1px solid rgba(211, 211, 211, 0.342);
     background-color: var(--primary-color-bg);
     color: var(--primary-color-text);
+}
+
+.signin__button:hover {
+    background-color: rgba(211, 211, 211, 0.068);
+}
+
+#download {
+    display: flex;
+    flex-direction: column;
+    margin-top: 105px;
+    /* border: 1px solid red; */
+    width: 45%;
+}
+
+#download > h1 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#download button {
+    margin-top: 20px;
+    padding: 7px 0px;
+    width: 30%;
+    font-weight: 600;
+}
+
+.download_linux_button > span {
+    font-size: 20px;
+    font-weight: 500;
 }
