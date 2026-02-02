@@ -1,0 +1,85 @@
+:root {
+    --primary-color-bg: #14120b;
+    --primary-color-text: #ffffff;
+    --secondary-color-text: #EDECEC;
+    --button-bg: #edecec;
+    --font-main: "CursorGothic", "CursorGothic Fallback", system-ui, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--primary-color-bg);
+    color: var(--secondary-color-text);
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+    height: 60px;
+    margin: 0px 170px;
+}
+
+#logo {
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    cursor: pointer;
+    /* border: 1px solid orange; */
+}
+
+#logo > img {
+    height: 35%;
+    object-fit: cover;
+}
+
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li > a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px;
+    color: var(--secondary-color-text);
+}
+
+li > a:hover {
+    color: lightgray;
+}
+
+.button {
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 47px;
+    padding: 7px 10px;
+    cursor: pointer;
+    margin: 0px 4px;
+}
+
+.download_button {
+    width: 80px;
+}
+
+.signin__button {
+    border: 1px solid rgba(211, 211, 211, 0.342);
+    background-color: var(--primary-color-bg);
+    color: var(--primary-color-text);
+}
