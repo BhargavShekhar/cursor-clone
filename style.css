@@ -21,6 +21,11 @@ body {
     padding-inline: 300px;
 }
 
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -45,7 +50,7 @@ nav {
     object-fit: cover;
 }
 
-ul {
+#nav_list {
     display: flex;
     list-style: none;
 }
@@ -246,11 +251,70 @@ li > a:hover {
 
 .selected {
     background-color: var(--secondary-color-bg);
-    /* color: white; */
 }
 
 #selected_text {
     color: white;
     font-weight: 200;
     font-size: 13px;
+}
+
+.chat_bot {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    overflow-y: scroll;
+    height: 94%;
+}
+
+.chat_bot > h4 {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.highlight_para {
+    background-color: rgb(26, 24, 24);
+    border: 1px solid rgba(211, 211, 211, 0.171);
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 4px 0px;
+    cursor: pointer;
+}
+
+.highlight_para:hover {
+    background-color: rgba(211, 211, 211, 0.062);
+}
+
+.chat_bot_info > div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 7px 0px;
+}
+
+.chat_bot_info_child > span {
+    color: var(--secondary-color-text);
+    font-size: 13px;
+}
+
+.chat_bot_info_child > p {
+    color: var(--secondary-color-text);
+    font-size: 11px;
+}
+
+.chat_bot > p {
+    font-size: 13px;
+}
+
+.chat_bot > ul {
+    margin-left: 7px;
+    font-size: 13px;
+    /* padding: 8px; */
+}
+
+.chat_bot > ul > li {
+    margin: 6px 0px;
 }
