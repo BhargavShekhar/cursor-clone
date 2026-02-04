@@ -1,6 +1,8 @@
 :root {
     --primary-color-bg: #14120b;
+    --secondary-color-bg: rgba(211, 211, 211, 0.027);
     --primary-color-text: #EDECEC;
+    --secondary-color-text: gray;
     --button-bg: #edecec;
     --font-main: "CursorGothic", "CursorGothic Fallback", system-ui, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -15,8 +17,7 @@ body {
     font-family: var(--font-main);
     background-color: var(--primary-color-bg);
     color: var(--primary-color-text);
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
     padding-inline: 300px;
 }
 
@@ -24,9 +25,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid red; */
     height: 60px;
-    /* margin: 0px 150px; */
 }
 
 #logo {
@@ -39,10 +38,9 @@ nav {
     font-weight: bolder;
     font-size: large;
     cursor: pointer;
-    /* border: 1px solid orange; */
 }
 
-#logo>img {
+#logo > img {
     height: 35%;
     object-fit: cover;
 }
@@ -52,15 +50,15 @@ ul {
     list-style: none;
 }
 
-li>a {
+li > a {
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    padding: 20px;
+    padding: 17px;
     color: var(--primary-color-text);
 }
 
-li>a:hover {
+li > a:hover {
     color: lightgray;
 }
 
@@ -95,7 +93,6 @@ li>a:hover {
     display: flex;
     flex-direction: column;
     margin-top: 105px;
-    /* border: 1px solid red; */
     width: 45%;
 }
 
@@ -105,13 +102,155 @@ li>a:hover {
 }
 
 #download button {
-    margin-top: 20px;
+    margin-top: 24px;
     padding: 7px 0px;
-    width: 30%;
-    font-weight: 600;
+    width: 34%;
+    font-size: medium;
 }
 
 .download_linux_button > span {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
+}
+
+.section {
+    display: grid;
+    grid-template-rows: repeat(5, 5fr);
+    grid-column: 1fr;
+}
+
+.cursor_ide_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    position: relative;
+}
+
+.cursor_ide_parent > img {
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cursor_ide {
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    border-radius: 10px;
+    background-color: var(--primary-color-bg);
+}
+
+.cursor_ide_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-block-end: 1px solid rgba(211, 211, 211, 0.37);
+    padding: 2px 5px;
+    height: 5%;
+}
+
+.cursor_ide_header > h5 {
+    font-weight: 200;
+}
+
+.get_cursor{
+    font-weight: 200;
+    font-size: 12px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color-bg);
+    gap: 4px;
+    padding-inline: 12px;
+}   
+
+.get_cursor:hover {
+    color: lightgray;
+}
+
+.get_cursor > div {
+    margin-right: 8px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbbbbb25;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.small_dot {
+    height: 2px;
+    width: 2px;
+    background-color: #bbbbbb73;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cursor_ide_body {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+.left_ide_section {
+    padding: 14px;
+    color: var(--secondary-color-text);
+}
+
+.left_ide_section > h4 {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.progress_details {
+    padding: 14px 0px;
+}
+
+.progress_details:hover {
+    background-color: var(--secondary-color-bg);
+    cursor: pointer;
+}
+
+.progress_details > div {
+    display: flex;
+    gap: 8px;
+    padding-left: 4px;
+    font-weight: 100;
+}
+
+.detail > p {
+    font-size: 14px;
+    color: var(--primary-color-text);
+}
+
+.progress_details > span {
+    font-weight: 200;
+    font-size: small;
+    padding-left: 28px;
+}
+
+.plus_line {
+    color: green;
+}
+
+.minus_line {
+    color: brown;
+}
+
+.selected {
+    background-color: var(--secondary-color-bg);
+    /* color: white; */
+}
+
+#selected_text {
+    color: white;
+    font-weight: 200;
+    font-size: 13px;
 }
