@@ -236,9 +236,48 @@
                         </div>
 
                         <div class="terminal">
-                            <div id="tab1">train_model.py &nbsp;&nbsp; x</div>
-                            <div id="tab2">run_experiment.py</div>
-                            <div id="tab3">config.yaml</div>
+                            <div class="terminal_tab">
+                                <div id="tab1" class="tab">train_model.py &nbsp;&nbsp; x</div>
+                                <div id="tab2" class="tab">run_experiment.py</div>
+                                <div id="tab3" class="tab">config.yaml</div>
+                            </div>
+
+                            <div class="terminal_editor">
+                                <pre><code>
+    <span class="im">import</span> <span class="var">torch</span>
+    <span class="im">import</span> <span class="var">torch.nn</span> <span class="kw">as</span> <span class="var">nn</span>
+    <span class="im">from</span> <span class="var">torch.utils.data</span> <span class="im">import</span> <span class="var">DataLoader</span>
+    <span class="im">from</span> <span class="var">torchvision</span> <span class="im">import</span> <span class="var">datasets</span>, <span class="var">transforms</span>
+    <span class="im">from</span> <span class="var">tqdm</span> <span class="im">import</span> <span class="var">tqdm</span>
+    <span class="im">import</span> <span class="var">yaml</span>
+    <span class="im">from</span> <span class="var">pathlib</span> <span class="im">import</span> <span class="var">Path</span>
+    <span class="im">import</span> <span class="var">json</span>
+
+
+    <span class="kw">def</span> <span class="fn">get_dataloaders</span>(<span class="var">batch_size</span>=<span class="num">64</span>):
+        <span class="var">transform</span> = <span class="var">transforms</span>.Compose([
+            <span class="var">transforms</span>.ToTensor()
+        ])
+
+        <span class="var">train</span> = <span class="var">datasets</span>.MNIST(
+            <span class="var">root</span>=<span class="str">"data"</span>,
+            <span class="var">train</span>=<span class="kw">True</span>,
+            <span class="var">download</span>=<span class="kw">True</span>,
+            <span class="var">transform</span>=<span class="var">transform</span>
+        )
+
+        <span class="var">test</span> = <span class="var">datasets</span>.MNIST(
+            <span class="var">root</span>=<span class="str">"data"</span>,
+            <span class="var">train</span>=<span class="kw">False</span>,
+            <span class="var">transform</span>=<span class="var">transform</span>
+        )
+
+        <span class="kw">return</span> <span class="var">DataLoader</span>(<span class="var">train</span>, <span class="var">batch_size</span>=<span class="var">batch_size</span>), \
+        <span class="var">DataLoader</span>(<span class="var">test</span>, <span class="var">batch_size</span>=<span class="var">batch_size</span>)
+                                </code></pre>
+                            </div>
+
+
                         </div>
                     </div>
 

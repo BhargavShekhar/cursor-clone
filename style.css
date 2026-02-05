@@ -5,6 +5,13 @@
     --secondary-color-text: gray;
     --button-bg: #edecec;
     --font-main: "CursorGothic", "CursorGothic Fallback", system-ui, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --syntax-keyword: #569cd6;
+    --syntax-import: #c586c0;
+    --syntax-string: #ce9178;
+    --syntax-function: #dcdcaa;
+    --syntax-number: #b5cea8;
+    --syntax-comment: #6a9955;
+    --syntax-variable: #9cdcfe;
 }
 
 * {
@@ -337,3 +344,49 @@ li > a:hover {
 .input:focus {
     outline: none;
 }
+
+.terminal {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    height: 94%;
+    overflow: hidden;
+}
+
+.terminal_tab {
+    display: flex;
+    padding: 4px 12px;
+    gap: 12px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.tab:hover {
+    background-color: rgba(211, 211, 211, 0.062);
+}
+
+#tab1 {
+    background-color: #0f0f0f;
+    color: white;
+}
+
+.terminal_editor pre {
+    margin: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #9cdcfe;
+    white-space: pre-wrap;
+}
+
+.kw { color: var(--syntax-keyword); }
+.im { color: var(--syntax-import); }
+.fn { color: var(--syntax-function); }
+.str { color: var(--syntax-string); }
+.num { color: var(--syntax-number); }
+.cmt { color: var(--syntax-comment); }
+.var { color: var(--syntax-variable); }
